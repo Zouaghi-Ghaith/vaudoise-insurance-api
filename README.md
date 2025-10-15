@@ -91,4 +91,78 @@ data for audit and compliance requirements.
 scenarios via the updatedSince filter parameter.
 
 
+********************************** Proof of Functionality ********************************
+
+Create company:
+![Create Client](images/img.png)
+
+Constraints : 
+All not null
+Email:
+Unique company identifier
+![2](images/img_1.png)
+![3](images/img_2.png)
+
+Phone number shouldn't be:
+less than 7 char
+have characters
+more than 25
+![4](images/img_3.png)
+![5](images/img_4.png)
+
+Create Person:
+All Dates ISO 8601 format.
+![6](images/img_5.png)
+
+Contraints:
+Same for company plus:
+Birthdate dates
+![7](images/img_6.png)
+
+Read a person/company
+![8](images/img_8.png)
+
+Update client: except birthdate and company identifier
+![9](images/img_9.png)
+
+Delete client:
+![10](images/img_10.png)
+
+create contract
+create conract for a client
+* contact has a start date (if not provided, set it to the urrent date) an end date (if not provided then put null value)
+* contract cost amount
+* keep the update date (last modified date) internally, it should not be exposed in the api
+* ![11](images/img_11.png)
+* ![12](images/img_12.png)
+
+costAmount should be positive
+![13](images/img_13.png)
+
+Update the CostAmount
+![15](images/img_15.png)
+
+Get all the contracts for one client
+  o It should return only the active contracts (current date < end date)
+  o Possibility to filter by the update date.
+![14](images/img_14.png)
+
+
+
+A very performant endpoint that returns the sum of all the cost amount of the active
+contracts (current date < end date) for one client.
+![16](images/img_16.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
