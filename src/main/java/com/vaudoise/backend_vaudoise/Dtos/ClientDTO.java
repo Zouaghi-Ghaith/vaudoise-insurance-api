@@ -32,7 +32,6 @@ public class ClientDTO {
     @PastOrPresent(message = "Birthdate cannot be in the future")
     private LocalDate birthdate;
 
-
     private String companyIdentifier;
 
 }
