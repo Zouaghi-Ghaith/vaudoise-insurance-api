@@ -18,6 +18,7 @@ public class ContractDTO {
     private LocalDate startDate;
     private LocalDate endDate;
 
+
     @NotNull(message = "Cost amount is required")
     @Positive(message = "Cost amount must be positive")
     private BigDecimal costAmount;
