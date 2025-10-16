@@ -2,8 +2,9 @@ Backend Vaudoise - Insurance Client & Contract Management API
 
 A RESTful API built with Spring Boot for managing insurance clients and their contracts.
 
-📋 Table of Contents
 
+
+📋 Table of Contents
 Prerequisites
 Quick Start
 API Endpoints
@@ -12,19 +13,22 @@ Architecture & Design
 Proof of Functionality
 Technology Stack
 
+
 🔧 Prerequisites
 Before you begin, ensure you have the following installed:
-
 ☕ Java 17 or higher
 📦 Maven 3.6+
 🐳 Docker Desktop (for PostgreSQL 17)
 🔧 Git
 
+
 🚀 Quick Start
+
 Step 1: Clone the Repository
 Open Git Bash (or terminal) and run:
 git clone https://github.com/Zouaghi-Ghaith/vaudoise-insurance-api.git
 cd vaudoise-insurance-api
+
 
 Step 2: Start PostgreSQL with Docker
 First Time Setup
@@ -50,6 +54,7 @@ docker stop postgres-vaudoise
 
 💡 Alternative: If you don't want to use Docker, you can install PostgreSQL directly on your PC and create a database named postgres.
 
+
 Step 3: Build and Run the Project
 
 Open the project in your IDE (IntelliJ IDEA, Eclipse, VS Code, etc.)
@@ -63,25 +68,8 @@ The API will start on http://localhost:8080 ✅
 
 📋 API Endpoints
 
-Client Management
-Method                    Endpoint                                            Description
-------                    -------------------------------------------         ------------------------------------------------------
-POST                      /api/clients                                        Create a new client (PERSON or COMPANY)
-GET                       /api/clients/{id}                                   Get client details by ID
-PUT                       /api/clients/{id}                                   Update client (name, phone, email only)
-DELETE                    /api/clients/{id}                                   Delete client and close all contracts
+![17](images/img_17.png)
 
-
-
-Contract Management
-Contract Management
-*******************
-Method                    Endpoint                                            Description
-------                    -------------------------------------------         ------------------------------------------------------
-POST                      /api/clients/{clientId}/contracts                   Create a contract for a client
-GET                       /api/clients/{clientId}/contracts                   Get active contracts (optional: ?updatedSince=ISO8601)
-GET                       /api/clients/{clientId}/contracts/sum-active        Get sum of all active contract costs
-PUT                       /api/contracts/{id}                                 Update contract details
 
 
 🧪 Testing with Postman
@@ -114,6 +102,7 @@ have characters
 more than 25
 ![4](images/img_3.png)
 ![5](images/img_4.png)
+
 
 2. Create Person:
 All Dates ISO 8601 format.
